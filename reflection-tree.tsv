@@ -1,28 +1,28 @@
 id	parentId	type	text	options	target
 START	null	start	Good evening. Let's reflect on your day.	null	A1_Q1
 A1_Q1	START	question	When something went wrong today, what was your first reaction?	Tried to fix|Blamed others|Adapted|Waited	A1_D1
-A1_D1	A1_Q1	decision	null	answer=Tried to fix|Adapted:A1_HIGH;answer=Blamed others|Waited:A1_LOW
+A1_D1	A1_Q1	decision	null	answer=Tried to fix|Adapted:A1_HIGH;answer=Blamed others|Waited:A1_LOW	null
 A1_HIGH	A1_D1	reflection	You showed ownership and control in your actions today.	null	B1
 A1_LOW	A1_D1	reflection	It felt like things were outside your control today.	null	B2
 B1	A1_HIGH	bridge	Let's think about how you contributed today.	null	A2_Q1
 B2	A1_LOW	bridge	Let's think about your contribution today.	null	A2_Q2
 A2_Q1	B1	question	Which best describes your actions today?	Helped others|Focused only on work|Did extra work|Expected recognition	A2_D1
 A2_Q2	B2	question	Which best describes your actions today?	Helped others|Focused only on work|Did extra work|Expected recognition	A2_D2
-A2_D1	A2_Q1	decision	null	answer=Helped others|Did extra work:A2_HIGH;answer=Focused only on work|Expected recognition:A2_LOW
-A2_D2	A2_Q2	decision	null	answer=Helped others|Did extra work:A2_HIGH;answer=Focused only on work|Expected recognition:A2_LOW
+A2_D1	A2_Q1	decision	null	answer=Helped others|Did extra work:A2_HIGH;answer=Focused only on work|Expected recognition:A2_LOW	null
+A2_D2	A2_Q2	decision	null	answer=Helped others|Did extra work:A2_HIGH;answer=Focused only on work|Expected recognition:A2_LOW	null
 A2_HIGH	A2_D1	reflection	You focused on contributing beyond expectations.	null	B3
 A2_LOW	A2_D1	reflection	You were more focused on what you received today.	null	B4
-A2_HIGH2	A2_D2	reflection	You still made efforts to contribute today.	null	B3
-A2_LOW2	A2_D2	reflection	Today felt more about expectations than contribution.	null	B4
+A2_HIGH	A2_D2	reflection	You still made efforts to contribute today.	null	B3
+A2_LOW	A2_D2	reflection	Today felt more about expectations than contribution.	null	B4
 B3	A2_HIGH	bridge	Now let's reflect on your perspective.	null	A3_Q1
 B4	A2_LOW	bridge	Now let's reflect on your perspective.	null	A3_Q2
 A3_Q1	B3	question	Who were you thinking about most today?	Myself only|My team|Others more than me|Customers/users	A3_D1
 A3_Q2	B4	question	Who were you thinking about most today?	Myself only|My team|Others more than me|Customers/users	A3_D2
-A3_D1	A3_Q1	decision	null	answer=My team|Others more than me|Customers/users:A3_HIGH;answer=Myself only:A3_LOW
-A3_D2	A3_Q2	decision	null	answer=My team|Others more than me|Customers/users:A3_HIGH;answer=Myself only:A3_LOW
+A3_D1	A3_Q1	decision	null	answer=My team|Others more than me|Customers/users:A3_HIGH;answer=Myself only:A3_LOW	null
+A3_D2	A3_Q2	decision	null	answer=My team|Others more than me|Customers/users:A3_HIGH;answer=Myself only:A3_LOW	null
 A3_HIGH	A3_D1	reflection	You expanded your thinking beyond yourself today.	null	SUMMARY
 A3_LOW	A3_D1	reflection	Your focus stayed mostly on yourself today.	null	SUMMARY
-A3_HIGH2	A3_D2	reflection	You made an effort to think about others.	null	SUMMARY
-A3_LOW2	A3_D2	reflection	You were more self-focused today.	null	SUMMARY
+A3_HIGH	A3_D2	reflection	You made an effort to think about others.	null	SUMMARY
+A3_LOW	A3_D2	reflection	You were more self-focused today.	null	SUMMARY
 SUMMARY	A3_HIGH	summary	Today you showed awareness, contribution, and broader thinking. Keep building on this.	null	END
 END	SUMMARY	end	Good job reflecting. See you tomorrow.	null	null
